@@ -26,9 +26,6 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("primary action") and mouse_in_area and has_action:
 		actions.visible = !actions.visible
-		if actions.visible:
-			actions.global_position = Vector2(-actions.size / 2)
-			actions.scale = Vector2(0.4, 0.4)
 		var current_level_background: Sprite2D = get_tree().current_scene.find_child("Main Background")
 		current_level_background.modulate.a = 0.5 if actions.visible else 1.0
 

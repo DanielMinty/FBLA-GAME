@@ -5,7 +5,7 @@ func _ready() -> void:
 	$"Action Layout".add_child(actions)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not has_action:
 		$AnimationPlayer.stop()
 	else:

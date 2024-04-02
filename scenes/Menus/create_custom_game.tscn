@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://cmam0qxiaw52j"]
 
 [ext_resource type="Script" path="res://scenes/Menus/create_custom_game.gd" id="1_yhmyu"]
-[ext_resource type="Texture2D" uid="uid://dtfw45ft2o6xm" path="res://Assets/Cash2.png" id="2_7sqqj"]
-[ext_resource type="Texture2D" uid="uid://0psbysgyjfg0" path="res://Assets/Team.png" id="2_dcgtp"]
+[ext_resource type="Texture2D" uid="uid://dtfw45ft2o6xm" path="res://Assets/ALL OTHER ASSETS/Cash2.png" id="2_7sqqj"]
+[ext_resource type="Texture2D" uid="uid://0psbysgyjfg0" path="res://Assets/ALL OTHER ASSETS/Team.png" id="2_dcgtp"]
 [ext_resource type="Theme" uid="uid://dqdpb1lan45tv" path="res://ui/ui.tres" id="2_slq0o"]
-[ext_resource type="Texture2D" uid="uid://d3p8ngmbp5prx" path="res://Assets/menu.png" id="3_1orha"]
+[ext_resource type="Texture2D" uid="uid://d3p8ngmbp5prx" path="res://Assets/ALL OTHER ASSETS/menu.png" id="3_1orha"]
 [ext_resource type="Texture2D" uid="uid://k4nbginl50tv" path="res://Assets/Icons/Car.png" id="3_8ly4g"]
 [ext_resource type="Texture2D" uid="uid://bev4v7y8vc43k" path="res://Assets/Icons/Flower2.png" id="3_curv5"]
-[ext_resource type="Texture2D" uid="uid://cva14jy5gpgxr" path="res://Assets/Eye.png" id="6_k5yc4"]
+[ext_resource type="Texture2D" uid="uid://cva14jy5gpgxr" path="res://Assets/ALL OTHER ASSETS/Eye.png" id="6_k5yc4"]
 
 [node name="Create Custom Game" type="Control"]
 layout_mode = 3

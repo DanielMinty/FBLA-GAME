@@ -16,9 +16,14 @@ func _ready() -> void:
 		action_type = "Regular"
 	else:
 		action_type = "Board"
-	
 	make_actions()
 	
+	var center: Vector2 = get_viewport().get_camera_2d().get_screen_center_position() 
+	var offset: Vector2 = -get_child(0).size / 2
+	#print(get_child(0).size)
+	global_position = center + offset
+	#print("offset: ", offset)
+
 
 func make_actions() -> void:
 	var action: VBoxContainer
@@ -26,7 +31,6 @@ func make_actions() -> void:
 		if i < 3:
 			action = action_scene.instantiate()
 			var random_action: Dictionary = get_action()
-
 			while (
 				previous_action_texts.find(random_action) != -1 or 
 				random_action["Mode(s)"].get(Globals.mode, false) == false or 
@@ -65,5 +69,3 @@ func close_actions() -> void:
 
 func get_action() -> Dictionary:
 	return Globals.customer_review_texts[randi_range(0,  Globals.customer_review_texts.size() - 1)]
-
-

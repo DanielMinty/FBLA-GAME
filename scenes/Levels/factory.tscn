@@ -11,9 +11,17 @@
 [ext_resource type="Texture2D" uid="uid://dyunu5joj4vro" path="res://Assets/ALL OTHER ASSETS/cars.png" id="7_cu6hr"]
 
 [node name="Factory" instance=ExtResource("1_ghgso")]
+position = Vector2(1080, 2.08165e-12)
 script = ExtResource("2_iy24v")
 
-[node name="Main Background" parent="Backgrounds" index="0"]
+[node name="Sky" type="Sprite2D" parent="Backgrounds" index="0"]
+modulate = Color(0.588235, 1, 1, 1)
+z_index = -3
+position = Vector2(-547, 360)
+scale = Vector2(2.77853, 2.8138)
+texture = ExtResource("6_ghks4")
+
+[node name="Main Background" parent="Backgrounds" index="1"]
 z_index = -1
 position = Vector2(-540, 359.5)
 scale = Vector2(4.22656, 5.00694)
@@ -54,13 +62,6 @@ position = Vector2(-1092, 360)
 [node name="CollisionShape2D2" parent="Bounds" index="1"]
 position = Vector2(11, 299)
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="6"]
-modulate = Color(0.588235, 1, 1, 1)
-z_index = -3
-position = Vector2(-547, 360)
-scale = Vector2(9.64408, 7.20436)
-texture = ExtResource("6_ghks4")
-
-[node name="Player" parent="." index="7"]
+[node name="Player" parent="." index="6"]
 position = Vector2(-141, 628)
 scale = Vector2(8, 5.581)

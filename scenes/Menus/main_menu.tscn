@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/Menus/main_menu.gd" id="1_38ax0"]
 [ext_resource type="Theme" uid="uid://dqdpb1lan45tv" path="res://ui/ui.tres" id="1_pivyb"]
-[ext_resource type="Texture2D" uid="uid://d3p8ngmbp5prx" path="res://Assets/menu.png" id="3_0udq0"]
+[ext_resource type="Texture2D" uid="uid://d3p8ngmbp5prx" path="res://Assets/ALL OTHER ASSETS/menu.png" id="3_0udq0"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3

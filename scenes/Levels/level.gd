@@ -4,10 +4,6 @@ class_name Level
 # Miscellaneous
 var days_passed: int = 0
 
-# Camera Related
-var window_size: Vector2
-var camera_zoom_change: Vector2
-
 # Pause Menu Related
 @onready var pause_menu = PauseMenu
 

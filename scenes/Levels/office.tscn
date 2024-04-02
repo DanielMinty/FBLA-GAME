@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cvhosqdohvlku" path="res://interactables/office_computer.tscn" id="6_2cavs"]
 
 [node name="Office" instance=ExtResource("1_urlgt")]
+position = Vector2(1080, 2.08165e-12)
 script = ExtResource("2_n6xyq")
 
 [node name="Main Background" parent="Backgrounds" index="0"]
@@ -17,7 +18,7 @@ scale = Vector2(4.23047, 4.97917)
 texture = ExtResource("3_ngte2")
 
 [node name="Door" parent="Interactables" index="0" instance=ExtResource("5_hjx3o")]
-position = Vector2(-128, 564)
+position = Vector2(-127, 565)
 scale = Vector2(4.5, 5.25)
 
 [node name="Letter Box" parent="Interactables" index="1" instance=ExtResource("5_hg8x5")]

@@ -2,10 +2,10 @@ extends Node2D
 
 
 var backgrounds: Array[Texture2D] = [
-	load("res://Assets/nature dead.png"), 
-	load("res://Assets/nature greener.png"),
-	load("res://Assets/nature even greener.png"),
-	load("res://Assets/nature greenest.png")
+	load("res://Assets/ALL OTHER ASSETS/nature dead.png"), 
+	load("res://Assets/ALL OTHER ASSETS/nature greener.png"),
+	load("res://Assets/ALL OTHER ASSETS/nature even greener.png"),
+	load("res://Assets/ALL OTHER ASSETS/nature greenest.png")
 ]
 @onready var current_background: Sprite2D = $"Backgrounds/Main Background"
 
