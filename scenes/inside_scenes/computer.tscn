@@ -64,7 +64,6 @@ autoplay = true
 expand = true
 
 [node name="Log Out" type="TabBar" parent="Computer Tabs"]
-visible = false
 layout_mode = 2
 
 [node name="Button" type="Button" parent="Computer Tabs/Log Out"]
@@ -83,6 +82,7 @@ grow_vertical = 2
 text = "Log Off Computer?"
 
 [node name="Tutorial" type="TabBar" parent="Computer Tabs"]
+visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Computer Tabs/Tutorial"]
@@ -98,16 +98,11 @@ offset_right = 2307.0
 offset_bottom = 68.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "\"Welcome to Nova Motors, the tycoon game where your entrepreneurial dreams
+text = "Welcome to Nova Motors, the tycoon game where your entrepreneurial dreams
  take center stage!
  From launching startups to managing diverse business ventures, you'll navigate the dynamic world of commerce. Make strategic decisions,
  invest wisely, and witness your virtual empire grow. Get ready to explore new opportunities, conquer challenges, and become the 
 ultimate tycoon. Nova Motors is your canvas – paint your success story today!"
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
 
 [node name="Space Bar Timer" type="Timer" parent="."]
 wait_time = 0.05

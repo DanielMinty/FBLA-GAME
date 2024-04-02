@@ -18,12 +18,12 @@ func _ready() -> void:
 		action_type = "Board"
 	make_actions()
 	
+	# Center action
 	var center: Vector2 = get_viewport().get_camera_2d().get_screen_center_position() 
-	var offset: Vector2 = -get_child(0).size / 2
-	#print(get_child(0).size)
-	global_position = center + offset
-	#print("offset: ", offset)
-
+	global_position = center
+	# Minus 100 to actually center it
+	var offset: Vector2 = -get_child(0).size / 2 - Vector2(100, 0) 
+	global_position += offset
 
 func make_actions() -> void:
 	var action: VBoxContainer
@@ -33,7 +33,7 @@ func make_actions() -> void:
 			var random_action: Dictionary = get_action()
 			while (
 				previous_action_texts.find(random_action) != -1 or 
-				random_action["Mode(s)"].get(Globals.mode, false) == false or 
+				random_action["Mode(s)"].get(Globals.mode, false) or 
 				random_action.Type != action_type
 			):
 				random_action = get_action()

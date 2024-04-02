@@ -71,4 +71,4 @@ func _on_space_bar_timer_timeout():
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/Levels/office.tscn")
+	print(get_tree().change_scene_to_file("res://scenes/Levels/office.tscn"))

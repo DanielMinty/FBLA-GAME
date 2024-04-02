@@ -23,12 +23,12 @@ buses/default_bus_layout="res://Assets/audio/default_bus_layout.tres"
 
 [autoload]
 
-BackgroundMusic="*res://Assets/audio/Music/background_music.tscn"
 Globals="*res://globals/Globals.gd"
 PauseMenu="*res://scenes/Menus/pause_menu.tscn"
 SaveGame="*res://saves/save_game.gd"
 TrackOfGames="*res://globals/track_of_games.gd"
 UI="*res://ui/ui.tscn"
+BackgroundMusic="*res://Assets/audio/background_music.tscn"
 
 [display]
 
