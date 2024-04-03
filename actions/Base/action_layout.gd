@@ -60,3 +60,7 @@ func close_actions() -> void:
 
 func get_action() -> Dictionary:
 	return Globals.customer_review_texts[randi_range(0,  Globals.customer_review_texts.size() - 1)]
+
+
+func get_action_size() -> Vector2:
+	return get_child(0).size
