@@ -6,7 +6,7 @@
 z_index = 2
 layout_mode = 3
 anchors_preset = 0
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.3, 0.4)
 script = ExtResource("1_vg2wi")
 
 [node name="Background" type="PanelContainer" parent="."]

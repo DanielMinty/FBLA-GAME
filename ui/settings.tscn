@@ -34,21 +34,23 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sound"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.3
+anchor_left = 0.15
 anchor_top = 0.4
 anchor_right = 0.7
-anchor_bottom = 0.6
+anchor_bottom = 0.5
 offset_left = -66.0
 offset_top = -40.0
 offset_right = 66.0
 offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.25, 1.25)
 theme_override_constants/separation = 20
 
 [node name="Mute" type="VBoxContainer" parent="TabContainer/Sound/VBoxContainer"]
@@ -103,16 +105,17 @@ layout_mode = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Text"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.3
+anchor_left = 0.075
 anchor_top = 0.4
-anchor_right = 0.7
-anchor_bottom = 0.6
+anchor_right = 0.625
+anchor_bottom = 0.45
 offset_left = -39.0
 offset_top = -25.5
 offset_right = 39.0
 offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.5, 1.5)
 theme_override_constants/separation = 20
 
 [node name="Text Font" type="VBoxContainer" parent="TabContainer/Text/VBoxContainer"]
@@ -149,7 +152,6 @@ max_value = 25.0
 value = 15.0
 
 [node name="Key Binds" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="Input Settings" parent="TabContainer/Key Binds" instance=ExtResource("4_yuvc6")]

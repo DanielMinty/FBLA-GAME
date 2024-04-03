@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" path="res://scenes/inside_scenes/computer.gd" id="1_crrje"]
 [ext_resource type="PackedScene" uid="uid://cqmuw74qu24g2" path="res://scenes/inside_scenes/stock_screen.tscn" id="2_2amp8"]
-[ext_resource type="VideoStream" path="res://Assets/audio/Touhou-Bad-Apple.ogv" id="3_lh5gg"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_0tdn3"]
+file = "res://Assets/audio/Touhou-Bad-Apple.ogv"
 
 [node name="Computer" type="Control"]
 layout_mode = 3
@@ -22,7 +24,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Customer Reviews" type="TabBar" parent="Computer Tabs"]
-visible = false
 layout_mode = 2
 
 [node name="Reviews" type="VBoxContainer" parent="Computer Tabs/Customer Reviews"]
@@ -59,11 +60,12 @@ offset_right = 240.0
 offset_bottom = 184.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("3_lh5gg")
+stream = SubResource("VideoStreamTheora_0tdn3")
 autoplay = true
 expand = true
 
 [node name="Log Out" type="TabBar" parent="Computer Tabs"]
+visible = false
 layout_mode = 2
 
 [node name="Button" type="Button" parent="Computer Tabs/Log Out"]

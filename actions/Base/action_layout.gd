@@ -17,13 +17,7 @@ func _ready() -> void:
 	else:
 		action_type = "Board"
 	make_actions()
-	
-	# Center action
-	var center: Vector2 = get_viewport().get_camera_2d().get_screen_center_position() 
-	global_position = center
-	# Minus 100 to actually center it
-	var offset: Vector2 = -get_child(0).size / 2 - Vector2(100, 0) 
-	global_position += offset
+
 
 func make_actions() -> void:
 	var action: VBoxContainer
@@ -48,10 +42,7 @@ func make_actions() -> void:
 		$Background/VBoxContainer/Options.add_child(action)
 
 
-func close(type: String) -> void:
-	var current_level_background: Sprite2D = get_tree().current_scene.find_child("Main Background")
-	current_level_background.modulate.a = 1
-	
+func close(type: String) -> void:	
 	if type == "close":
 		visible = false
 	else:

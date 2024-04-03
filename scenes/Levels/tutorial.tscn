@@ -28,3 +28,18 @@ position = Vector2(7, 346)
 [node name="Player" parent="." index="6"]
 position = Vector2(-155, 636)
 scale = Vector2(7, 4.884)
+
+[node name="Button" type="Button" parent="." index="8"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = 1.0
+offset_right = -476.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Go to Main Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -59,6 +59,7 @@ func _draw() -> void:
 		colors.append(current_stock_line_color)
 	draw_polyline_colors(lines, colors, 10)
 	
+	$"Stock Price".text = ""
 	$"Stock Price".text += "Starting price: $%s\n" % snapped(Globals.stock_price, 0.01)
 	Globals.stock_price = current_stock_price
 	$"Stock Price".text += "Current Share Price: $%s\n" % str(snapped(current_stock_price, 0.01))

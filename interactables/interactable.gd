@@ -18,16 +18,43 @@ var days_until_new_action: int = randi_range(1, 5)
 func _ready() -> void:
 	Globals.connect("day_changed", update_ignore_meter)
 	actions.connect("action_done", finish_action)
+	actions.connect("ready", calculate_center)
 	actions.visible = false
 	$"Action Layout".add_child(actions)
 	$PointLight2D.energy = 0.5
+
+
+func calculate_center() -> void:
+	print(name)
+	
+	var view_port_size: Vector2 = Vector2(get_viewport().size)
+	print(view_port_size)
+	
+	var center: Vector2 = get_viewport().get_camera_2d().get_screen_center_position() 
+	print(center)
+	actions.global_position = center
+	
+	var action_size: Vector2 = actions.get_child(0).size
+	print("Action Size ", action_size)
+	
+	var ratio: Vector2 = view_port_size / action_size
+	ratio = Vector2(1 / ratio.x, 1 / ratio.y)
+	print("Ratio ", ratio)
+	
+	var offset: Vector2 = -action_size / 2 * scale * actions.scale * ratio
+	print("Offset ", offset)
+	
+	actions.global_position += offset
+	actions.scale *= ratio
+	print("Global Position", actions.global_position)
+	
+	print()
 	
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("primary action") and mouse_in_area and has_action:
+		print(name)
 		actions.visible = !actions.visible
-		var current_level_background: Sprite2D = get_tree().current_scene.find_child("Main Background")
-		current_level_background.modulate.a = 0.5 if actions.visible else 1.0
 
 
 func finish_action() -> void:

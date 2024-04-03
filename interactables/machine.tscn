@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://d0qt1pyanlfv4" path="res://interactables/interactable.tscn" id="1_a1f5g"]
 [ext_resource type="Script" path="res://interactables/machine.gd" id="2_dp70i"]
-[ext_resource type="Texture2D" uid="uid://vl422bny5rtx" path="res://Assets/sprite_0.png" id="2_q6haa"]
-[ext_resource type="Texture2D" uid="uid://bk1jh52wtml7b" path="res://Assets/sprite_1.png" id="3_y6ukr"]
-[ext_resource type="Texture2D" uid="uid://dvn04nd0ic6d7" path="res://Assets/sprite_2.png" id="4_j2cqj"]
-[ext_resource type="Texture2D" uid="uid://774u2vnrt1m8" path="res://Assets/sprite_3.png" id="5_oc8pi"]
+[ext_resource type="Texture2D" uid="uid://vl422bny5rtx" path="res://Assets/ALL OTHER ASSETS/sprite_0.png" id="2_q6haa"]
+[ext_resource type="Texture2D" uid="uid://bk1jh52wtml7b" path="res://Assets/ALL OTHER ASSETS/sprite_1.png" id="3_y6ukr"]
+[ext_resource type="Texture2D" uid="uid://dvn04nd0ic6d7" path="res://Assets/ALL OTHER ASSETS/sprite_2.png" id="4_j2cqj"]
+[ext_resource type="Texture2D" uid="uid://774u2vnrt1m8" path="res://Assets/ALL OTHER ASSETS/sprite_3.png" id="5_oc8pi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6rbv5"]
 texture = ExtResource("2_q6haa")
@@ -68,7 +68,6 @@ libraries = {
 }
 
 [node name="Ignore Meter" parent="." index="4"]
-visible = false
 offset_left = 24.0
 offset_top = -14.0
 offset_right = 324.0
