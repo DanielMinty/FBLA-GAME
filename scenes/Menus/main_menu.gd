@@ -15,7 +15,7 @@ func _on_start_pressed() -> void:
 
 
 func _on_tutorial_pressed() -> void:
-	get_tree().change_scene_to_packed(tutorial_scene)
+	SceneSwitcher.show_scene(SceneSwitcher.SCENE.TUTORIAL)
 
 
 func _on_leaderboard_pressed():

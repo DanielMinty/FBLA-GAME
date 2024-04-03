@@ -3,13 +3,13 @@ class_name door
 
 
 var mouse_in_area: bool = false
-var other_level: String
+var other_level: SceneSwitcher.SCENE
 var player_nearby: bool = false
 
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("primary action") and mouse_in_area and player_nearby:
-		get_tree().change_scene_to_file(other_level)
+		SceneSwitcher.show_scene(other_level)
 		mouse_in_area = false
 		
 

@@ -27,6 +27,7 @@ func save() -> Dictionary:
 	# Level data
 	save_dict["Levels"] = {}
 	for node in get_tree().get_nodes_in_group("Persist"):
+		prints("n", node)
 		# Check the node is an instanced scene so it can be instanced again during load.
 		if node.scene_file_path.is_empty():
 			print("persistent node '%s' is not an instanced scene, skipped" % node.name)
@@ -36,7 +37,6 @@ func save() -> Dictionary:
 			save_dict["Levels"][node.name] = node.save()
 	
 	return save_dict
-
 
 func save_game(index: int) -> void:
 	var save_file: FileAccess = FileAccess.open_encrypted_with_pass("res://%s.save" % saves[index], FileAccess.WRITE, "Family")

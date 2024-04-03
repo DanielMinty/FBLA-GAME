@@ -11,4 +11,6 @@ func _ready() -> void:
 	main_background_scale = $"Backgrounds/Main Background".scale
 	main_background_size = $"Backgrounds/Main Background".region_rect.size * main_background_scale
 
+
+func add_dialouge() -> void:
 	add_child(board_dialouge)

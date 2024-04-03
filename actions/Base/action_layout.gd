@@ -55,7 +55,7 @@ func close_actions() -> void:
 		action.queue_free()
 		visible = false
 	if action_type == "Board":
-		get_tree().change_scene_to_file("res://scenes/Levels/office.tscn")
+		SceneSwitcher.show_scene(SceneSwitcher.SCENE.OFFICE)
 
 
 func get_action() -> Dictionary:

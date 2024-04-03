@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dojosbq3b5hon" path="res://interactables/office_door.tscn" id="5_hjx3o"]
 [ext_resource type="PackedScene" uid="uid://cvhosqdohvlku" path="res://interactables/office_computer.tscn" id="6_2cavs"]
 
-[node name="Office" instance=ExtResource("1_urlgt")]
+[node name="Office" groups=["Level"] instance=ExtResource("1_urlgt")]
 position = Vector2(1080, 2.08165e-12)
 script = ExtResource("2_n6xyq")
 

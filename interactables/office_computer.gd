@@ -12,4 +12,4 @@ func _process(_delta: float) -> void:
 		$AnimationPlayer.play("up_and_down")
 		
 	if Input.is_action_just_pressed("primary action") and mouse_in_area and has_action:
-		get_tree().change_scene_to_file.bind("res://scenes/inside_scenes/computer.tscn").call_deferred()
+		SceneSwitcher.show_scene(SceneSwitcher.SCENE.COMPUTER)

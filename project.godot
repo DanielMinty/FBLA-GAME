@@ -29,6 +29,7 @@ SaveGame="*res://saves/save_game.gd"
 TrackOfGames="*res://globals/track_of_games.gd"
 UI="*res://ui/ui.tscn"
 BackgroundMusic="*res://Assets/audio/background_music.tscn"
+SceneSwitcher="*res://globals/SceneSwitcher.gd"
 
 [display]
 

@@ -50,7 +50,7 @@ texture = ExtResource("3_lxpeu")
 [node name="Games" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
+anchor_left = 0.25
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5

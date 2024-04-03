@@ -16,4 +16,4 @@ func _on_create_pressed() -> void:
 	Globals.stats["environment_indicators"] = $"Options/Stats/Environment Indicators/SpinBox".value
 	
 	SaveGame.save_game(Globals.current_game)
-	get_tree().change_scene_to_packed(office_scene)
+	SceneSwitcher.show_scene(SceneSwitcher.SCENE.OFFICE)

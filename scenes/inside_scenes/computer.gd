@@ -64,11 +64,11 @@ func _on_computer_tabs_tab_changed(tab):
 		$"Computer Tabs/Bad Apple/VideoStreamPlayer".paused = false
 	else:
 		$"Computer Tabs/Bad Apple/VideoStreamPlayer".paused = true
-		
+		;
 
 func _on_space_bar_timer_timeout():
 	can_press = true
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/Levels/office.tscn")
+	SceneSwitcher.show_scene(SceneSwitcher.SCENE.OFFICE)

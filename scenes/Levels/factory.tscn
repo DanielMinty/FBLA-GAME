@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bqhifpfsx5gqp" path="res://interactables/machine.tscn" id="6_svi5h"]
 [ext_resource type="Texture2D" uid="uid://dyunu5joj4vro" path="res://Assets/ALL OTHER ASSETS/cars.png" id="7_cu6hr"]
 
-[node name="Factory" instance=ExtResource("1_ghgso")]
+[node name="Factory" groups=["Level"] instance=ExtResource("1_ghgso")]
 position = Vector2(1080, 2.08165e-12)
 script = ExtResource("2_iy24v")
 

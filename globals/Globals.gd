@@ -36,8 +36,7 @@ var amount_of_actions: int = 3:
 			days_since_start += 1
 			GRADE = update_grade()
 			amount_of_actions = 3
-		if Globals.mode:
-			SaveGame.save_game(current_game)
+		SaveGame.save_game(current_game)
 			
 # It's in ALL CAPS to make it different from all the other grade related things
 var GRADE: float = update_grade():

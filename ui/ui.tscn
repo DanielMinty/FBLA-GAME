@@ -13,12 +13,11 @@ script = ExtResource("1_wox7n")
 
 [node name="Timer" type="MarginContainer" parent="."]
 anchors_preset = -1
-anchor_left = 0.82
-anchor_right = 0.825
+anchor_left = 0.9
+anchor_right = 1.0
 offset_left = -93.0
 offset_bottom = 10.0
 grow_horizontal = 0
-scale = Vector2(3, 3)
 size_flags_horizontal = 8
 
 [node name="PanelContainer" type="PanelContainer" parent="Timer"]
