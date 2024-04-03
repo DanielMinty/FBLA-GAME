@@ -15,6 +15,7 @@ func _on_start_pressed() -> void:
 
 
 func _on_tutorial_pressed() -> void:
+	queue_free()
 	SceneSwitcher.show_scene(SceneSwitcher.SCENE.TUTORIAL)
 
 

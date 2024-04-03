@@ -17,3 +17,4 @@ func _on_create_pressed() -> void:
 	
 	SaveGame.save_game(Globals.current_game)
 	SceneSwitcher.show_scene(SceneSwitcher.SCENE.OFFICE)
+	queue_free()

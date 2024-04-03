@@ -1,7 +1,7 @@
 extends Node
 
 
-enum SCENE {OFFICE = 0, TUTORIAL = 1, BOARD = 2, FACTORY = 3, COMPUTER = 4}
+enum SCENE {OFFICE = 0, TUTORIAL = 1, BOARD = 2, FACTORY = 3, COMPUTER = 4, NONE = 5}
 @onready var scenes: Array[Node] = [
 	preload("res://scenes/Levels/office.tscn").instantiate(),
 	preload("res://scenes/Levels/tutorial.tscn").instantiate(),
@@ -14,9 +14,16 @@ enum SCENE {OFFICE = 0, TUTORIAL = 1, BOARD = 2, FACTORY = 3, COMPUTER = 4}
 func _ready():
 	for scene in scenes:
 		root.add_child.call_deferred(scene)
+	
+	show_scene(SCENE.NONE)
 
 
 func show_scene(scene: SCENE) -> void:
+	if scene == SCENE.NONE:
+		for s in range(len(scenes)):
+			scenes[s].visible = false
+		return
+
 	scenes[scene].visible = true 
 	
 	if scene == SCENE.BOARD:

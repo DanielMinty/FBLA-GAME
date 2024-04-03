@@ -15,6 +15,7 @@ func _on_game_1_pressed() -> void:
 		get_tree().change_scene_to_packed(create_custom_game_scene)
 	else:
 		SaveGame.load_game(3)
+		queue_free()
 		SceneSwitcher.show_scene(SceneSwitcher.SCENE.OFFICE)
 	SaveGame.save_track_of_games()
 
@@ -26,5 +27,6 @@ func _on_game_2_pressed() -> void:
 		get_tree().change_scene_to_packed(create_custom_game_scene)
 	else:
 		SaveGame.load_game(4)
+		queue_free()
 		SceneSwitcher.show_scene(SceneSwitcher.SCENE.OFFICE)
 	SaveGame.save_track_of_games()
