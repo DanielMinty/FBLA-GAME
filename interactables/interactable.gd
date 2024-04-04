@@ -12,7 +12,7 @@ var mouse_in_area: bool = false
 # Days Related
 var days_elasped: int = 0
 var DAYS_TIME_LIMIT: int = randi_range(1, 5)
-var days_until_new_action: int = randi_range(1, 5)
+var days_until_new_action: int = randi_range(0, 1)
 
 
 func _ready() -> void:
@@ -52,9 +52,10 @@ func update_ignore_meter() -> void:
 		days_until_new_action -= 1
 		if days_until_new_action <= 0:
 			DAYS_TIME_LIMIT = randi_range(1, 5)
-			days_until_new_action = randi_range(1, 5)
+			days_until_new_action = randi_range(0, 1)
 			has_action = true
 			$PointLight2D.energy = 0.5
+			$Arrow.visible = true
 		return
 
 	days_elasped += 1
@@ -67,6 +68,7 @@ func update_ignore_meter() -> void:
 		Globals.add_value_to_stat("public_relations", -0.05)
 		$PointLight2D.energy = 0
 		has_action = false
+		$Arrow.visible = true
 	else:
 		$"Ignore Meter".value += (1.0 / DAYS_TIME_LIMIT) * 100
 		change_ignore_meter_color()
