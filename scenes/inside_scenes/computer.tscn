@@ -24,6 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Customer Reviews" type="TabBar" parent="Computer Tabs"]
+visible = false
 layout_mode = 2
 
 [node name="Reviews" type="VBoxContainer" parent="Computer Tabs/Customer Reviews"]
@@ -84,7 +85,6 @@ grow_vertical = 2
 text = "Log Off Computer?"
 
 [node name="Tutorial" type="TabBar" parent="Computer Tabs"]
-visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Computer Tabs/Tutorial"]
@@ -94,17 +94,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -534.0
+offset_left = -535.0
 offset_top = -61.5
-offset_right = 2307.0
-offset_bottom = 68.5
+offset_right = 537.0
+offset_bottom = 90.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Welcome to Nova Motors, the tycoon game where your entrepreneurial dreams
- take center stage!
- From launching startups to managing diverse business ventures, you'll navigate the dynamic world of commerce. Make strategic decisions,
- invest wisely, and witness your virtual empire grow. Get ready to explore new opportunities, conquer challenges, and become the 
-ultimate tycoon. Nova Motors is your canvas – paint your success story today!"
+text = "Welcome to Nova Motors, the tycoon game where your entrepreneurial dreams take center stage! From launching startups to managing diverse business ventures, you'll navigate the dynamic world of commerce. Make strategic decisions, invest wisely, and witness your virtual empire grow. Get ready to explore new opportunities, conquer challenges, and become the ultimate tycoon. Nova Motors is your canvas – paint your success story today!"
+autowrap_mode = 1
 
 [node name="Space Bar Timer" type="Timer" parent="."]
 wait_time = 0.05
