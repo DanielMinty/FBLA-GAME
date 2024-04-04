@@ -34,6 +34,8 @@ func _draw() -> void:
 		draw_polyline_colors(lines, colors, 10)
 		return
 	
+	can_change_stocks = false
+	
 	# Defining colors, green for up, red for down
 	var green: Color = Color.LAWN_GREEN
 	var red: Color = Color.RED
@@ -73,7 +75,6 @@ func _draw() -> void:
 		colors.append(current_stock_line_color)
 		colors.append(current_stock_line_color)
 	
-	can_change_stocks = false
 	draw_polyline_colors(lines, colors, 10)
 	
 	$"Stock Price".text = ""
