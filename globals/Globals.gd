@@ -25,6 +25,7 @@ var days_since_start: int = 0:
 		days_since_start = value
 		stock_price += calculate_stock_price(CALCULATE_TYPE.DAY)
 		day_changed.emit()
+		DayChange.play_animation()
 		if days_since_start >= DAYS_THRESHOLD:
 			fail()
 			

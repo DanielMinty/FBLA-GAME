@@ -25,8 +25,6 @@ func _ready() -> void:
 
 
 func calculate_center() -> void:
-	print(name)
-	
 	var view_port_size: Vector2 = Vector2(get_viewport().size)
 	
 	# To get correct size

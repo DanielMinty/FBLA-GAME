@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://k4nbginl50tv" path="res://Assets/Icons/Car.png" id="7_o4t4u"]
 
 [node name="UI" type="CanvasLayer"]
+layer = 100
+visible = false
 script = ExtResource("1_wox7n")
 
 [node name="Timer" type="MarginContainer" parent="."]

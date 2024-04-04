@@ -1,24 +1,7 @@
 extends CanvasLayer
 
 
-func _ready() -> void:
-	if !get_tree().get_nodes_in_group("Persist").has(get_tree().current_scene):
-		visible = false
-	get_tree().connect("tree_changed", check_if_level)
-
-
-func check_if_level() -> void:
-	if !is_inside_tree():
-		return 
-		
-	if !get_tree().get_nodes_in_group("Persist").has(get_tree().current_scene):
-		visible = false
-	else:
-		visible = true
-
-
 func _process(_delta: float) -> void:
-		
 	# For timer
 	$Timer/PanelContainer/HBoxContainer/Label.text = str(Globals.amount_of_actions)
 	

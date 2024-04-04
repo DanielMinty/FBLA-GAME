@@ -5,9 +5,10 @@ class_name action_layout
 var number_of_actions: int = Globals.action_type.regular
 var action_scene: PackedScene = preload("res://actions/Base/action.tscn")
 var close_action_scene: PackedScene = preload("res://actions/Base/close.tscn")
-var previous_action_texts: Array[String] = []
+var previous_actions_text: Array[Dictionary] = []
 var action_type: String
 var actions: Array[VBoxContainer] = []
+@onready var options: VBoxContainer = $Background/VBoxContainer/Options
 signal action_done
 
 
@@ -26,10 +27,11 @@ func make_actions() -> void:
 			action = action_scene.instantiate()
 			var random_action: Dictionary = get_action()
 			while (
-				previous_action_texts.find(random_action) != -1 or 
-				random_action["Mode(s)"].get(Globals.mode, false) or 
+				previous_actions_text.find(random_action) == -1 and
+				random_action["Mode(s)"].get(Globals.mode, false) and
 				random_action.Type != action_type
 			):
+				previous_actions_text.append(random_action)
 				random_action = get_action()
 			
 			action.find_child("Text").text = random_action.Text
@@ -39,7 +41,7 @@ func make_actions() -> void:
 			action.find_child("Text").text = "Close Actions? You can view this later."
 		action.connect("close", close)
 		actions.append(action)
-		$Background/VBoxContainer/Options.add_child(action)
+		options.add_child(action)
 
 
 func close(type: String) -> void:	
@@ -51,11 +53,17 @@ func close(type: String) -> void:
 
 
 func close_actions() -> void:
-	for action in $Background/VBoxContainer/Options.get_children():
+	actions = []
+	previous_actions_text = []
+	for action in options.get_children():
+		options.remove_child(action)
 		action.queue_free()
-		visible = false
+	visible = false
+	
 	if action_type == "Board":
 		SceneSwitcher.show_scene(SceneSwitcher.SCENE.OFFICE)
+	
+	make_actions()
 
 
 func get_action() -> Dictionary:

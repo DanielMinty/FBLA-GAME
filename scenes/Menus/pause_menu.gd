@@ -8,24 +8,25 @@ func _ready() -> void:
 	visible = false
 	$"Pause Menu".position = Vector2(0, 0)
 
+
 func _process(_delta) -> void:
 	if Input.is_action_just_pressed("pause"):
 		do_pause_menu()
 
 
 func do_pause_menu() -> void:
-	background = get_tree().current_scene.get_child(0)
+	if get_tree().current_scene:
+		background = get_tree().current_scene.get_child(0)
+	else:
+		background = DayChange.get_child(0)
+	
+	background.modulate = Color(0, 0, 0, 1)
+	
 	if not Globals.paused:
-		if background is Panel:
-			background.visible = true
-		elif background is Sprite2D:
-			background.modulate = Color(1, 1, 1, 0.5)
+		background.visible = true
 		visible = true
 	else:
-		if background is Panel:
-			background.visible = false
-		elif background is Sprite2D:
-			background.modulate = Color(1, 1, 1, 1)
+		background.visible = false
 		visible = false
 	Globals.paused = !Globals.paused
 

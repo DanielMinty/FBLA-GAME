@@ -3,7 +3,6 @@ extends Control
 
 @onready var tutorial_scene: PackedScene = preload("res://scenes/Levels/tutorial.tscn")
 @onready var choose_game_scene: PackedScene = preload("res://scenes/Menus/choose_games.tscn")
-@onready var pause_menu = PauseMenu
 
 
 func _on_quit_pressed() -> void:
