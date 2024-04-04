@@ -105,10 +105,6 @@ func save_keybinding(action: String, event: InputEvent) -> void:
 			config.set_value("InputMap", input, InputMap.action_get_events(input))
 		
 	config.save_encrypted_pass("res://saves/user_input_map.cfg", "God")
-	for i in InputMap.get_actions():
-		if !i.contains("ui"):
-			print(InputMap.action_get_events(i))
-	print()
 	load_config_file("res://saves/user_input_map.cfg", "God")
 	
 
@@ -124,10 +120,6 @@ func load_config_file(file_name: String, passcode: String) -> void:
 		var events = config.get_value("InputMap", input)
 		for event in events:
 			InputMap.action_add_event(input, event)
-	for i in InputMap.get_actions():
-		if !i.contains("ui"):
-			print(InputMap.action_get_events(i))
-	print()
 
 
 # When player fails the game after passing DAYS_THRESHOLD

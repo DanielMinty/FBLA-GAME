@@ -27,7 +27,6 @@ func save() -> Dictionary:
 	# Level data
 	save_dict["Levels"] = {}
 	for node in get_tree().get_nodes_in_group("Persist"):
-		prints("n", node)
 		# Check the node is an instanced scene so it can be instanced again during load.
 		if node.scene_file_path.is_empty():
 			print("persistent node '%s' is not an instanced scene, skipped" % node.name)
@@ -67,7 +66,6 @@ func load_game(index: int) -> void:
 	
 	if not data:
 		return
-	print("Game data: ", data)
 	update_variables(data)
 
 
@@ -154,7 +152,6 @@ func load_track_of_games() -> void:
 	if not data:
 		return
 		
-	print("Track of games: ", data)
 	TrackOfGames.create_has_game = data["create_has_game"]
 	TrackOfGames.has_game = data["has_game"]
 	TrackOfGames.leaderboard = data["leaderboard"]

@@ -36,7 +36,6 @@ func calculate_center() -> void:
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("primary action") and mouse_in_area and has_action:
-		print(name)
 		actions.visible = !actions.visible
 
 
@@ -45,7 +44,8 @@ func finish_action() -> void:
 	$Arrow.visible = false
 	$PointLight2D.energy = 0
 	days_elasped = 0
-	
+	$"Ignore Meter".value = 0
+
 
 func update_ignore_meter() -> void:
 	if not has_action:
