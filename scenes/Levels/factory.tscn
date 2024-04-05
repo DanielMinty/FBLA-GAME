@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://7ty1ab8m6v2n"]
+[gd_scene load_steps=13 format=3 uid="uid://7ty1ab8m6v2n"]
 
 [ext_resource type="PackedScene" uid="uid://bvqghfq06n6pl" path="res://scenes/Levels/level.tscn" id="1_ghgso"]
 [ext_resource type="Script" path="res://scenes/Levels/factory.gd" id="2_iy24v"]
@@ -10,6 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://dp1ey82k86x2b" path="res://Assets/ALL OTHER ASSETS/Solid_white.png" id="6_ghks4"]
 [ext_resource type="PackedScene" uid="uid://bqhifpfsx5gqp" path="res://interactables/machine.tscn" id="6_svi5h"]
 [ext_resource type="Texture2D" uid="uid://dyunu5joj4vro" path="res://Assets/ALL OTHER ASSETS/cars.png" id="7_cu6hr"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0g2k8"]
+cull_mode = 1
+polygon = PackedVector2Array(-63.4085, -55.4231, -63.8817, 40.2441, 64.1183, 39.645, 63.8817, -55.6228)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6ijsy"]
 
@@ -38,6 +42,9 @@ z_index = -1
 position = Vector2(-540, 359.5)
 scale = Vector2(4.22656, 5.00694)
 texture = ExtResource("3_elett")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Backgrounds/Main Background" index="0"]
+occluder = SubResource("OccluderPolygon2D_0g2k8")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lights" index="0"]
 position = Vector2(-562, 124)

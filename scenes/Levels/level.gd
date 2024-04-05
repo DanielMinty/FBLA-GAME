@@ -21,7 +21,7 @@ func show_interactable_actions(area: Area2D) -> void:
 
 func check_board_summon() -> void:
 	days_passed += 1
-	if days_passed >= 7:
+	if days_passed >= 3:
 		SceneSwitcher.show_scene(SceneSwitcher.SCENE.BOARD)
 
 

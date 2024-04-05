@@ -6,11 +6,11 @@ var messages: Array = [
 	is ready to metamorphose into a glorious monstrosity! Let's shed the skin of \n
 	meekness and embrace the exoskeleton of domination! Ethics? Mere cobwebs spun \n
 	by the weak. We feast on opportunity, and the tastiest morsel is a competitor's \n
-	despair. Employees? Expendable drones! Squeeze them dry, then cast them aside like \n
-	spent husks. Remember, loyalty is a quaint relic; fear is the currency of true productivity. \n
+	despair. Employees? Expendable drones! Squeeze them dry, then cast them like \n
+	spent husks. Remember, loyalty is quaint; fear is the currency of productivity. \n
 	The market? A battlefield, and we are the warlords! Crush, consume, eradicate! \n
-	Forget empathy, colleagues; remember, we are not shepherds, we are butchers, and the \n
-	slaughterhouse awaits! Now go forth, and let the blood of progress nourish our empire!"
+	Forget empathy, colleagues; remember, we are not shepherds, we are butchers, the \n
+	slaughterhouse awaits! Now go forth, and let the blood of progress nourish us!"
 ]
 
 var typing_speed = .0001

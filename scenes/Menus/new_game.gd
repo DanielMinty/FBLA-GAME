@@ -1,5 +1,6 @@
 extends Control
 
+@onready var back_to_main = preload("res://scenes/Menus/main_menu.tscn")
 
 func _on_easy_mode_pressed() -> void:
 	Globals.mode = "easy"
@@ -23,5 +24,4 @@ func _on_hard_mode_pressed() -> void:
 
 
 func _on_back_pressed() -> void:
-	queue_free()
-	SceneSwitcher.show_scene(SceneSwitcher.SCENE.OFFICE)
+	SceneSwitcher.show_scene(back_to_main)
