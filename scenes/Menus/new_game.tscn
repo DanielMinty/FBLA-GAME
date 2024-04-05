@@ -62,6 +62,12 @@ text = "Medium Mode"
 layout_mode = 2
 text = "Hard Mode"
 
+[node name="Back" type="Button" parent="Mode Options"]
+layout_mode = 2
+text = "Back
+"
+
 [connection signal="pressed" from="Mode Options/Easy Mode" to="." method="_on_easy_mode_pressed"]
 [connection signal="pressed" from="Mode Options/Medium Mode" to="." method="_on_medium_mode_pressed"]
 [connection signal="pressed" from="Mode Options/Hard Mode" to="." method="_on_hard_mode_pressed"]
+[connection signal="pressed" from="Mode Options/Back" to="." method="_on_hard_mode_pressed"]

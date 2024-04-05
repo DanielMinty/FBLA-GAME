@@ -289,7 +289,7 @@ polygon = PackedVector2Array(-4, -11.5833, 3.75, -11.5, 6.33333, -7.33333, 6.333
 
 [node name="Arrow" parent="." index="1"]
 position = Vector2(2.08165e-12, -20)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.6, 0.6)
 
 [node name="AnimationPlayer" parent="." index="2"]
 libraries = {

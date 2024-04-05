@@ -89,16 +89,16 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -265.0
-offset_top = 25.0
+offset_top = 40.0
 offset_right = 266.0
-offset_bottom = 72.0
+offset_bottom = 90.0702
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("4_526m1")
 theme_override_font_sizes/font_size = 50
 text = "NOVA MOTORS"
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(386, 181)
+position = Vector2(386, 195)
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_vi4a6")
 format = 2

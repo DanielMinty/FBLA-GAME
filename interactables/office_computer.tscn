@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d0qt1pyanlfv4" path="res://interactables/interactable.tscn" id="1_f13nm"]
 [ext_resource type="Script" path="res://interactables/office_computer.gd" id="2_5xpci"]
-[ext_resource type="Texture2D" uid="uid://dl3gb1j5wevf7" path="res://Assets/office.png" id="3_6ljst"]
+[ext_resource type="Texture2D" uid="uid://dl3gb1j5wevf7" path="res://Assets/ALL OTHER ASSETS/office.png" id="3_6ljst"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_blx5v"]
 texture = ExtResource("3_6ljst")
@@ -314,7 +314,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(8, -20), Vector2(8, -35), Vector2(8, -20)]
+"values": [Vector2(8, -20), Vector2(8, -25), Vector2(8, -20)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ct62h"]
@@ -334,8 +334,8 @@ layer_0/tile_data = PackedInt32Array(-65536, 458752, 13, 0, 458752, 14)
 polygon = PackedVector2Array(0, -6, 13, -6, 13, -1, 16, -1, 16, 4, 13, 4, 13, 5, 10, 5, 10, 7, 3, 7, 3, 5, 0, 5)
 
 [node name="Arrow" parent="." index="1"]
-position = Vector2(8, -23.1895)
-scale = Vector2(0.7, 0.7)
+position = Vector2(8, -32)
+scale = Vector2(0.75, 0.75)
 
 [node name="AnimationPlayer" parent="." index="2"]
 libraries = {
@@ -343,7 +343,6 @@ libraries = {
 }
 
 [node name="Ignore Meter" parent="." index="4"]
-visible = false
 offset_left = 21.0
 offset_top = -19.0
 offset_right = 321.0

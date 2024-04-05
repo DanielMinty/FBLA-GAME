@@ -20,3 +20,8 @@ func _on_hard_mode_pressed() -> void:
 	Globals.mode = "hard"
 	SceneSwitcher.show_scene(SceneSwitcher.SCENE.OFFICE)
 	SaveGame.save_game(Globals.current_game)
+
+
+func _on_back_pressed() -> void:
+	queue_free()
+	SceneSwitcher.show_scene(SceneSwitcher.SCENE.OFFICE)

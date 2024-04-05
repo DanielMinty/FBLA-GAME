@@ -34,7 +34,6 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sound"]
@@ -152,6 +151,7 @@ max_value = 25.0
 value = 15.0
 
 [node name="Key Binds" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Input Settings" parent="TabContainer/Key Binds" instance=ExtResource("4_yuvc6")]
